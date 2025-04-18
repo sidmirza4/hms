@@ -126,7 +126,7 @@ export function DateTimePickerForm({ onDateTimeChange }: DateTimePickerFormProps
                       selected={field.value}
                       onSelect={handleDateSelect}
                       initialFocus
-                      disabled={(date) => {
+                      disabled={(date: Date) => {
                         // Disable dates in the past and today
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
