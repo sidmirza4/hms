@@ -11,4 +11,12 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      // Make sure react-day-picker is properly bundled
+      external: [],
+    },
+    // Increase the chunk size warning limit to avoid warnings
+    chunkSizeWarningLimit: 600,
+  },
 })
